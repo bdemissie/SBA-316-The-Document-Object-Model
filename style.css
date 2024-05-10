@@ -22,7 +22,7 @@ body {
 
 }
 
-.container {
+.container-input {
     box-shadow: 0 4px 8px rgba(0,0,0,5.0);
 }
 
@@ -44,11 +44,21 @@ header h1 {
     margin: auto;
     margin-top: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,5.0);
-    width: 700px;
-
-
-
-    
-    
+    width: 500px;
 };
 
+.container-info {
+  padding: 10px;
+  
+}
+
+.label {
+  font-weight: bold;
+  width: 120px;
+  text-align: right;
+}
+
+.info {
+  padding-left: 10px;
+  text-align: left;
+}

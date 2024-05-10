@@ -15,14 +15,14 @@
 </head>
 
 <body class="main ">
-    <div class="container">
+    <div class="container container-input">
         <div class="row checkit">
             <div class="checkout-box ">
                 <h3 class="font-weight-bold text-dark">CONTACT PAGE</h3>
-                <form>
+                <form class="contact-form">
                     <div class="row my-1">
                         <div class="col">
-                            <input type="text" class="form-control First Name" placeholder="First Name" required
+                            <input type="text" class="form-control first-name" placeholder="First Name" required
                             pattern="[a-zA-Z]*" title="First name should only contain letters.">
                         </div>
                         <div class="col">
@@ -35,15 +35,15 @@
                             <input type="email" class="form-control Email" placeholder="Email"required>
                         </div>
                         <div class="col">
-                            <input type="tel" class="Phone form-control " name="phone"maxlength="10"
-                                placeholder="***-***-****"pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Phone number must be in the format: ***-***-****" required>
+                            <input type="tel" class="Phone form-control " name="phone"
+                                placeholder="000-000-0000"pattern="[0-9]{3}[0-9]{3}[0-9]{4}" title="Phone number must be in the format: ***-***-****" required>
                         </div>
                     </div>
                     <div class="form-group my-1">
                         <input type="text" class="form-control Street Address" placeholder="Street Address"required>
                     </div>
                     <div class="form-group my-1">
-                        <input type="text" class="form-control Apartment" placeholder="Apartment, Studio, or Floor"required>
+                        <input type="text" class="form-control Apartment" placeholder="Apartment, Studio, or Floor">
                     </div>
 
                     <div class="form-row row my-1">
@@ -72,28 +72,29 @@
 
         </div>
     </div>
-    <div class="container" id="container">
+    <div class="container container-info" id="contact-card">
+        <!-- table Element Row -->
         <div class="row">
-            <table class="contact-info" id="contact-info">
+            <table class="contact-info">
+                <tr class="col-12 ">
+                    <td class="label">Name:</td>
+                    <td class="info">Bennet H Demissie</td>
+                </tr>
+                <tr class="col-12 ">
+                    <td class="label">Address:</td>
+                    <td class="info">1121 University Blvd W. Apt 1313</td>
+                </tr>
                 <tr class="col-12">
-                    <td>Name:</td>
-                    <td>Bennet H Demissie</td>
+                    <td class="label">City:</td>
+                    <td class="info">Silver Spring, MD, 20904</td>
                 </tr>
-                <tr>
-                    <td>Address:</td>
-                    <td>1121 University Blvd W. Apt 1313</td>
+                <tr class="col-12 ">
+                    <td class="label">Email:</td>
+                    <td class="info">bennet.hdemissie@gmail.com</td>
                 </tr>
-                <tr>
-                    <td>City:</td>
-                    <td>Silver Spring, MD, 20904</td>
-                </tr>
-                <tr>
-                    <td>Email:</td>
-                    <td>bennet.hdemissie@gmail.com</td>
-                </tr>
-                <tr>
-                    <td>Phone:</td>
-                    <td>2405336079</td>
+                <tr class="col-12">
+                    <td class="label">Phone:</td>
+                    <td class="info">2405336079</td>
                 </tr>
             </table>
         </div>
