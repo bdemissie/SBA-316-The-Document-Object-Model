@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css" rel="stylesheet">
+
+    <title>SBA-316-The-Document-Objec-Model</title>
+</head>
+
+<body class="main ">
+    <div class="container">
+        <div class="row checkit">
+            <div class="checkout-box ">
+                <h3 class="font-weight-bold text-dark">CONTACT PAGE</h3>
+                <form>
+                    <div class="row my-1">
+                        <div class="col">
+                            <input type="text" class="form-control First Name" placeholder="First Name" required
+                            pattern="[a-zA-Z]*" title="First name should only contain letters.">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control Last Name" placeholder="Last Name "required
+                            pattern="[a-zA-Z]*" title="Last name should only contain letters.">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col">
+                            <input type="email" class="form-control Email" placeholder="Email"required>
+                        </div>
+                        <div class="col">
+                            <input type="tel" class="Phone form-control " name="phone"maxlength="10"
+                                placeholder="***-***-****"pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Phone number must be in the format: ***-***-****" required>
+                        </div>
+                    </div>
+                    <div class="form-group my-1">
+                        <input type="text" class="form-control Street Address" placeholder="Street Address"required>
+                    </div>
+                    <div class="form-group my-1">
+                        <input type="text" class="form-control Apartment" placeholder="Apartment, Studio, or Floor"required>
+                    </div>
+
+                    <div class="form-row row my-1">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control City" placeholder="City" required>
+                        </div>
+                        <div class="form-group col">
+                            <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>MD</option>
+                                <option>VA</option>
+                                <option>PA</option>
+                                <option>CA</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col">
+                            <input type="text" class="form-control zip" placeholder="Zip">
+                        </div>
+                    </div>
+                    <div class="mt-3 ms-5">
+                        <button type="submit" class="btn btn-primary">SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="container" id="container">
+        <div class="row">
+            <table class="contact-info" id="contact-info">
+                <tr class="col-12">
+                    <td>Name:</td>
+                    <td>Bennet H Demissie</td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td>1121 University Blvd W. Apt 1313</td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td>Silver Spring, MD, 20904</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>bennet.hdemissie@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Phone:</td>
+                    <td>2405336079</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

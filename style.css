@@ -1,0 +1,54 @@
+.main{
+    background-image: url("/image/pexels-photo-796602.webp");
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.checkout-box{
+  padding: 100px;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+
+.checkit{
+    margin-top: 50px;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+
+}
+
+.container {
+    box-shadow: 0 4px 8px rgba(0,0,0,5.0);
+}
+
+header h1 {
+    text-align: center;
+}
+
+.contact-form button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+
+}
+.contact-info{
+    font-weight: 700;
+    color: black;
+    margin: auto;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,5.0);
+    width: 700px;
+
+
+
+    
+    
+};
+
