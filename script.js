@@ -1,15 +1,23 @@
 
 // Select the contact-form
+
 var contactForm = document.querySelector(".contact-form")
+
+// Select the div to store the contact cards
+
 var parentElement = document.getElementById("contact-card"); 
 
 // Add an event listener for the form submit event
-//Event Listener for Form Submission: The event listener is set up correctly to intercept the form submission, prevent the default action (which stops the form from being sent to the server), and handle validation before proceeding
+//The event listener is set up correctly to intercept the form submission, 
+// prevent the default action (which stops the form from being sent to the server), 
+// and handle validation before proceeding
 
 contactForm.addEventListener("submit", function(e) {
 
+    // Prevent default submit action
     e.preventDefault();
 
+    // check if user selected State from the dropdown list
     var isStateValid = validateState();
 
     // Break out of the submit event if state is not selected
@@ -17,20 +25,29 @@ contactForm.addEventListener("submit", function(e) {
     if(!isStateValid) {
 
         contactForm.reset
+
+        // Display a warning message for user to select a state
+        alert("Please select a State before submitting the form.");
+
         return
     }
 
+    // Run the function to dynamically create the contact cards
     submitForm(parentElement)
     
+    // Clear inputs and reset the form
+
     contactForm.reset()
 }
 )
+
+// ***************************************************************
 
 // This function will submit the contact form and generate a contact card
 
 function submitForm(parentElement) {
 
-    // Cache the values from the contact form to a variable
+    // Cache the values from the contact form to variables
 
     var firstName = document.querySelector(".first-name").value;
     var lastName = document.querySelector(".last-name").value;
@@ -42,7 +59,7 @@ function submitForm(parentElement) {
     var state = document.querySelector(".state").value;
     var zip = document.querySelector(".zip").value;
 
-    // Define the contact info array
+    // Assemble the form variables into an object array with key-value pair inputs
 
     var contactInfo = [
         { Label: "Full Name", Info: firstName.concat(" ", lastName)},        
@@ -53,16 +70,20 @@ function submitForm(parentElement) {
     ];
 
     // Create a table row div
+    // This is the div the contact card is going to be appended to
+    // Bootstrap styling class is also added to display the contact cards in a column grid.
     
     let tableRow = document.createElement("div")
     tableRow.classList.add("row")
 
-    // Create a table element
+    // Create a table element and apply custom sytling class
 
     var table = document.createElement("table");
     table.classList.add("contact-info");
 
-    // Iterate over contactInfo array and populate table
+    // Iterate over the contactInfo object array and populate table
+    // Bootstrap and custom styling classes are also applied during iteration
+
     contactInfo.forEach(function (item) {
         var row = table.insertRow();
         row.classList.add("col-12")
@@ -84,7 +105,9 @@ function submitForm(parentElement) {
 
 }
 
-// Check if state option is selected
+// **************************************************************
+
+// This function checks if state option is selected from the dropdown
 
 function validateState() {
 
@@ -92,26 +115,16 @@ function validateState() {
 
     var dropDown = document.getElementById("drop-down")
 
-    // Select div to write validation message if no selection is made
-
-    var validationMessage = document.getElementById("validation-message")
-    
-
     // Check if a state is selected
 
     if (dropDown.value === "Choose...") {
 
-        // Show validation message if no option is selected
-
-        validationMessage.textContent = "Please select a State from the dropdown"
-        validationMessage.style.color = "red"; // Change color to red
-        validationMessage.style.fontSize = "20px"; // Increase font size
-        
+        // No state selection
         return false;
     }
-        //Error Handling: While the code checks for state selection, considering additional error handling for other inputs might be beneficial, ensuring that all fields meet expected formats or are not left empty, especially since this is crucial for fields like email and phone number.
+       
     else {
-        validationMessage.textContent = ""
+        // State is selected
         return true
     }
 }

@@ -1,7 +1,5 @@
-
-
 .checkit{
-    background-image: url("/image/pexels-photo-531844.webp");
+    background-image: url("image/pexels-photo-531844.webp");
 	background-position: center;
 	background-repeat: no-repeat;
     background-size: cover;
@@ -51,6 +49,7 @@ header h1 {
 
 .container-info {
   padding: 10px;
+  
   
 }
 
