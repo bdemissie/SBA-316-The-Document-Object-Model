@@ -1,12 +1,10 @@
-// Add an onClick event Listener to the "Submit" botton of the form
 
 // Select the contact-form
-
 var contactForm = document.querySelector(".contact-form")
-
 var parentElement = document.getElementById("contact-card"); 
 
 // Add an event listener for the form submit event
+//Event Listener for Form Submission: The event listener is set up correctly to intercept the form submission, prevent the default action (which stops the form from being sent to the server), and handle validation before proceeding
 
 contactForm.addEventListener("submit", function(e) {
 
@@ -31,9 +29,6 @@ contactForm.addEventListener("submit", function(e) {
 // This function will submit the contact form and generate a contact card
 
 function submitForm(parentElement) {
-
-    // Prevent form from submitting to the server
-    // e.preventDefault();
 
     // Cache the values from the contact form to a variable
 
@@ -68,7 +63,6 @@ function submitForm(parentElement) {
     table.classList.add("contact-info");
 
     // Iterate over contactInfo array and populate table
-
     contactInfo.forEach(function (item) {
         var row = table.insertRow();
         row.classList.add("col-12")
@@ -114,15 +108,10 @@ function validateState() {
         validationMessage.style.fontSize = "20px"; // Increase font size
         
         return false;
-
-        
-
     }
-
+        //Error Handling: While the code checks for state selection, considering additional error handling for other inputs might be beneficial, ensuring that all fields meet expected formats or are not left empty, especially since this is crucial for fields like email and phone number.
     else {
-
         validationMessage.textContent = ""
-
         return true
     }
 }
@@ -130,7 +119,4 @@ function validateState() {
 
 
 
-// // Replace "parentElementId" with the actual ID of the parent element
-
-// submitForm(parentElement);
 
