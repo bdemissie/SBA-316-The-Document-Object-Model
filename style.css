@@ -1,9 +1,11 @@
-.main{
-    background-image: url("/image/pexels-photo-796602.webp");
+
+
+.checkit{
+    background-image: url("/image/pexels-photo-531844.webp");
 	background-position: center;
 	background-repeat: no-repeat;
     background-size: cover;
-    color: white;
+    
 }
 .checkout-box{
   padding: 100px;
@@ -23,7 +25,7 @@ body {
 }
 
 .container-input {
-    box-shadow: 0 4px 8px rgba(0,0,0,5.0);
+    box-shadow: 0 10px 20px rgba(0,0,0,2.0);
 }
 
 header h1 {
@@ -43,7 +45,7 @@ header h1 {
     color: black;
     margin: auto;
     margin-top: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,5.0);
+    box-shadow:  0 10px 20px rgba(0,0,0,2.0);
     width: 500px;
 };
 

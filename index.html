@@ -23,35 +23,35 @@
                     <div class="row my-1">
                         <div class="col">
                             <input type="text" class="form-control first-name" placeholder="First Name" required
-                            pattern="[a-zA-Z]*" title="First name should only contain letters.">
+                            pattern="[a-zA-Z]*" title="Fi12rst name should only contain letters.">
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control Last Name" placeholder="Last Name "required
+                            <input type="text" class="form-control last-name" placeholder="Last Name "required
                             pattern="[a-zA-Z]*" title="Last name should only contain letters.">
                         </div>
                     </div>
                     <div class="row my-1">
                         <div class="col">
-                            <input type="email" class="form-control Email" placeholder="Email"required>
+                            <input type="email" class="form-control email" placeholder="Email"required>
                         </div>
                         <div class="col">
-                            <input type="tel" class="Phone form-control " name="phone"
+                            <input type="tel" class="phone-number form-control " name="phone"
                                 placeholder="000-000-0000"pattern="[0-9]{3}[0-9]{3}[0-9]{4}" title="Phone number must be in the format: ***-***-****" required>
                         </div>
                     </div>
                     <div class="form-group my-1">
-                        <input type="text" class="form-control Street Address" placeholder="Street Address"required>
+                        <input type="text" class="form-control street-address" placeholder="Street Address" required>
                     </div>
                     <div class="form-group my-1">
-                        <input type="text" class="form-control Apartment" placeholder="Apartment, Studio, or Floor">
+                        <input type="text" class="form-control address-optional" placeholder="Apartment, Studio, or Floor (Optional)">
                     </div>
 
                     <div class="form-row row my-1">
                         <div class="form-group col-md-6">
-                            <input type="text" class="form-control City" placeholder="City" required>
+                            <input type="text" class="form-control city" placeholder="City" required>
                         </div>
                         <div class="form-group col">
-                            <select id="inputState" class="form-control">
+                            <select class="form-control state" id="drop-down">
                                 <option selected>Choose...</option>
                                 <option>MD</option>
                                 <option>VA</option>
@@ -68,36 +68,14 @@
                         <button type="submit" class="btn btn-primary">SUBMIT</button>
                     </div>
                 </form>
+                <div class="font-weight-bold" id="validation-message"></div>
             </div>
 
         </div>
     </div>
     <div class="container container-info" id="contact-card">
         <!-- table Element Row -->
-        <div class="row">
-            <table class="contact-info">
-                <tr class="col-12 ">
-                    <td class="label">Name:</td>
-                    <td class="info">Bennet H Demissie</td>
-                </tr>
-                <tr class="col-12 ">
-                    <td class="label">Address:</td>
-                    <td class="info">1121 University Blvd W. Apt 1313</td>
-                </tr>
-                <tr class="col-12">
-                    <td class="label">City:</td>
-                    <td class="info">Silver Spring, MD, 20904</td>
-                </tr>
-                <tr class="col-12 ">
-                    <td class="label">Email:</td>
-                    <td class="info">bennet.hdemissie@gmail.com</td>
-                </tr>
-                <tr class="col-12">
-                    <td class="label">Phone:</td>
-                    <td class="info">2405336079</td>
-                </tr>
-            </table>
-        </div>
+        <!-- We will populate this div using javascript based on the form inputs -->
     </div>
     <script src="script.js"></script>
 </body>

@@ -1,16 +1,26 @@
 // Add an onClick event Listener to the "Submit" botton of the form
 
 // Select the contact-form
+
 var contactForm = document.querySelector(".contact-form")
 
 var parentElement = document.getElementById("contact-card"); 
 
-
-
 // Add an event listener for the form submit event
 
 contactForm.addEventListener("submit", function(e) {
+
     e.preventDefault();
+
+    var isStateValid = validateState();
+
+    // Break out of the submit event if state is not selected
+
+    if(!isStateValid) {
+
+        contactForm.reset
+        return
+    }
 
     submitForm(parentElement)
     
@@ -28,22 +38,23 @@ function submitForm(parentElement) {
     // Cache the values from the contact form to a variable
 
     var firstName = document.querySelector(".first-name").value;
-    // var lastName = document.getElementById("Last Name").value;
-    // var email = document.getElementById("Email").value;
-    // var phone = document.getElementById("Phone").value;
-    // var streetAddress = document.getElementById("Street Address").value;
-    // var apartment = document.getElementById("Apartment").value;
-    // var city = document.getElementById("City").value;
-    // var zip = document.getElementById("zip").value;
+    var lastName = document.querySelector(".last-name").value;
+    var email = document.querySelector(".email").value;
+    var phone = document.querySelector(".phone-number").value;
+    var streetAddress = document.querySelector(".street-address").value;
+    var addressLine2 = document.querySelector(".address-optional").value;
+    var city = document.querySelector(".city").value;
+    var state = document.querySelector(".state").value;
+    var zip = document.querySelector(".zip").value;
 
     // Define the contact info array
 
     var contactInfo = [
-        { Label: "Full Name", Info: firstName},        
-        { Label: "Address", Info: "1121 University Blvd W. Apt 1313" },
-        { Label: "City", Info: "Silver Spring, MD, 20904" },
-        { Label: "Email", Info: "bennet.hdemissie@gmail.com" },
-        { Label: "Phone", Info: "2405336079" }
+        { Label: "Full Name", Info: firstName.concat(" ", lastName)},        
+        { Label: "Address", Info: streetAddress.concat(" ", addressLine2) },
+        { Label: "City", Info: city.concat(" ", state, " ", zip) },
+        { Label: "Email", Info: email },
+        { Label: "Phone", Info: phone }
     ];
 
     // Create a table row div
@@ -77,6 +88,43 @@ function submitForm(parentElement) {
 
     parentElement.appendChild(table);
 
+}
+
+// Check if state option is selected
+
+function validateState() {
+
+    // Select the state dropdown element
+
+    var dropDown = document.getElementById("drop-down")
+
+    // Select div to write validation message if no selection is made
+
+    var validationMessage = document.getElementById("validation-message")
+    
+
+    // Check if a state is selected
+
+    if (dropDown.value === "Choose...") {
+
+        // Show validation message if no option is selected
+
+        validationMessage.textContent = "Please select a State from the dropdown"
+        validationMessage.style.color = "red"; // Change color to red
+        validationMessage.style.fontSize = "20px"; // Increase font size
+        
+        return false;
+
+        
+
+    }
+
+    else {
+
+        validationMessage.textContent = ""
+
+        return true
+    }
 }
 
 
