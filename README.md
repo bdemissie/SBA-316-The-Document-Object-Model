@@ -52,4 +52,4 @@ validateState function
 
 Checks if a state has been selected from a dropdown menu in the form.
 
-The function returns true if a state is selected, and returns false if no state selection is made
+The function returns true if a state is selected, and returns false if no state selection is made# SBA-316-The-Document-Object-Model
